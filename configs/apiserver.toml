@@ -1,0 +1,7 @@
+bind_addr = ":8082"
+log_level = "debug"
+[store]
+database_url = "postgres://library:secret@localhost:5433/libraryapp?sslmode=disable"
+
+
+
