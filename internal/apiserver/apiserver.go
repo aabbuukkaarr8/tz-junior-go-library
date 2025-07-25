@@ -44,4 +44,8 @@ func (s *APIServer) configLogger() error {
 
 func (s *APIServer) ConfigureRouter(booksHandler *books.Handler) {
 	s.router.POST("/books/create", booksHandler.Create)
+	s.router.GET("/books", booksHandler.GetAll)
+	s.router.GET("/books/:id", booksHandler.GetByTitle)
+	s.router.PUT("/books/:id", booksHandler.Update)
+	s.router.DELETE("/books/:id", booksHandler.Delete)
 }

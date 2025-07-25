@@ -1,12 +1,11 @@
 package books
 
 import (
-	"github.com/google/uuid"
 	"time"
 )
 
 type Model struct {
-	ID          uuid.UUID `json:"id"`
+	ID          int       `json:"id"`
 	Title       string    `json:"title"`
 	Author      string    `json:"author"`
 	Pages       int       `json:"pages"`

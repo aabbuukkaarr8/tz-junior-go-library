@@ -6,4 +6,8 @@ import (
 
 type Repo interface {
 	Create(m *repoBooks.Model) (*repoBooks.Model, error)
+	GetAll() ([]repoBooks.Model, error)
+	GetById(id int) (*repoBooks.Model, error)
+	Update(m *repoBooks.Model) (*repoBooks.Model, error)
+	Delete(id int) error
 }
